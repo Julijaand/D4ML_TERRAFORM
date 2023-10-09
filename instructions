@@ -9,9 +9,10 @@ $ sudo apt-get install iptables
 
 create directory for you project:
 $ mkdir D4ML_TERRAFORM
-creata necesary files: main.tf, S3_backup.sh, sftp_setup.sh
+create necesary files: main.tf, S3_backup.sh, sftp_setup.sh
 
 run:
 terraform init
 terraform plan
 terraform apply
+terraform destroy
