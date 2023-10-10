@@ -3,7 +3,7 @@
 
 # Define the AWS provider and region
 provider "aws" {
-  region = "eu-central-1"  # Frankfurt region
+  region = var.region  
 }
 
 # Retrieve the default VPC for the region
@@ -12,9 +12,9 @@ data "aws_vpc" "main" {
 }
 # Launch an EC2 instance in the default VPC
 resource "aws_instance" "Julijas_sftp_server" {
-  ami           = "ami-08a34e890d3f70022"
-  instance_type = "t2.micro" 
-  key_name      = "julias_key_pair"
+  ami           = var.ami_id
+  instance_type = var.instance_type
+  key_name      = var.key_name
 
   # Include the user data scripts directly
   user_data = <<-EOF

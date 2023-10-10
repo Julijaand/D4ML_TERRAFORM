@@ -16,8 +16,3 @@ variable "instance_type" {
     description = "The type of the instance"
     default = "t2.micro"
 }
-
-variable "security_group" {
-    description = "The name of the security group"
-    default = "JuliasSecurityGroup"
-}
